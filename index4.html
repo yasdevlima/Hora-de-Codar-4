@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hora de Codar 4</title>
+</head>
+
+<script>
+    //Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE"
+    //o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles.
+
+
+    var estudantes = [];
+ 
+    do {
+        var cadastro = prompt("Faça o cadastro (ou digite pare)").toLowerCase();
+        estudantes.push(cadastro);
+ 
+       } while (cadastro !== "pare" );
+       
+           console.log(estudantes);
+ 
+           /*estudantes.pop();
+           alert(estudantes);
+           alert('Encerrado')
+
+
+
+
+    /*Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta.
+    Verifique se o planeta que o usuário informou está na array e informe ao usuário.*/
+
+
+
+    var planetas = ["Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+    var usuario = prompt("Digite o nome de uma planeta: ");
+ 
+    // console.log("Existe esse planeta no array? " + planetas.includes(" "));ddsd
+ 
+    if (usuario == planetas[0] || usuario == planetas[1] || usuario == planetas[2] || usuario == planetas[3] || usuario == planetas[4]) {
+        alert("Esse planeta existe no array :" + " " + planetas);
+ 
+    }
+    else if (usuario != planetas) {
+        alert("Não existe esse planeta no array!")
+    }
+
+    /*Vamos criar uma lista de compras.
+    Crie uma array de frutas, exiba - a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas.
+    Caso a fruta esteja no array, remova - a e exiba a mensagem "Fruta foi retirada da lista".
+    Peça novamente para o usuário digitar o nome de uma fruta para ser removida.
+    Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado".
+    Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".*/
+
+
+
+    var frutas = ["maçã", "banana", "laranja", "uva", "melancia"];
+    var cont = true;
+
+    while (cont && frutas.length > 0) {
+        var usuario = prompt("Digite o nome de uma das frutas: " + frutas.join(", "));
+        if (frutas.includes(usuario)) {
+            var index = frutas.indexOf(usuario);
+            frutas.splice(index, 1);
+            alert("A fruta foi retirada da lista.");
+        } else {
+            alert("Fruta indisponível no nosso mercado.");
+        }
+
+        if (frutas.length === 0) {
+            alert("Lista de compras finalizada.");
+            cont = false;
+        }
+    }
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>
